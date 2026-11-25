@@ -1,6 +1,9 @@
+import picocli.CommandLine;
+
 import static java.lang.IO.println;
 
 void main() {
+    new CommandLine(new MainCLI()).execute();
     API api = new API();
     try{
         Pokemon pokemon = api.getPokemonByName("pikachu");
